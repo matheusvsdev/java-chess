@@ -1,6 +1,6 @@
 package com.matheusvsdev;
 
-import com.matheusvsdev.controller.ChessMatch;
+import com.matheusvsdev.view.chess.ChessMatch;
 import com.matheusvsdev.view.UI;
 
 public class Main {
