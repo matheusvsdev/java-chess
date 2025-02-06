@@ -5,9 +5,6 @@ public class PositionEntity {
     private int row;
     private int column;
 
-    public PositionEntity() {
-    }
-
     public PositionEntity(int row, int column) {
         this.row = row;
         this.column = column;
