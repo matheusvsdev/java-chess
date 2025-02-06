@@ -1,14 +1,15 @@
 package com.matheusvsdev;
 
-import com.matheusvsdev.entities.BoardEntity;
-import com.matheusvsdev.entities.PositionEntity;
+import com.matheusvsdev.controller.ChessMatch;
+import com.matheusvsdev.view.UI;
 
 public class Main {
     public static void main(String[] args) {
-        PositionEntity position = new PositionEntity(3, 5);
 
-        System.out.println(position);
+        System.out.println();
 
-        BoardEntity board = new BoardEntity(8, 8);
+        ChessMatch chessMatch = new ChessMatch();
+        UI.printBoard(chessMatch.getPieces());
+
     }
 }

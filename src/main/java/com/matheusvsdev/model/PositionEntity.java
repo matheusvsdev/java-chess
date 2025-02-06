@@ -1,4 +1,4 @@
-package com.matheusvsdev.entities;
+package com.matheusvsdev.model;
 
 public class PositionEntity {
 
