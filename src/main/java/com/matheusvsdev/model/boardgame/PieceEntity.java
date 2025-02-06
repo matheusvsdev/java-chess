@@ -1,4 +1,4 @@
-package com.matheusvsdev.model;
+package com.matheusvsdev.model.boardgame;
 
 public class PieceEntity {
 

@@ -1,4 +1,4 @@
-package com.matheusvsdev.model;
+package com.matheusvsdev.model.boardgame;
 
 public class BoardEntity {
     private int rows;
@@ -17,6 +17,11 @@ public class BoardEntity {
 
     public PieceEntity piece(PositionEntity position) {
         return pieces[position.getRow()][position.getColumn()];
+    }
+
+    public void placePiece(PieceEntity piece, PositionEntity position) {
+        pieces[position.getRow()][position.getColumn()] = piece;
+        piece.position = position;
     }
 
     public int getRows() {

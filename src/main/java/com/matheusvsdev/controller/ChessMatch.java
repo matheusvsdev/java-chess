@@ -1,7 +1,11 @@
 package com.matheusvsdev.controller;
 
-import com.matheusvsdev.model.BoardEntity;
-import com.matheusvsdev.model.ChessPiece;
+import com.matheusvsdev.model.boardgame.BoardEntity;
+import com.matheusvsdev.model.boardgame.PositionEntity;
+import com.matheusvsdev.view.chess.ChessPiece;
+import com.matheusvsdev.view.chess.enums.Color;
+import com.matheusvsdev.view.chess.pieces.King;
+import com.matheusvsdev.view.chess.pieces.Rook;
 
 public class ChessMatch {
 
@@ -9,6 +13,7 @@ public class ChessMatch {
 
     public ChessMatch() {
         board = new BoardEntity(8, 8);
+        initialSetup();
     }
 
     public ChessPiece[][] getPieces() {
@@ -19,5 +24,10 @@ public class ChessMatch {
             }
         }
         return mat;
+    }
+
+    private void initialSetup() {
+        board.placePiece(new Rook(board, Color.WHITE), new PositionEntity(2, 1));
+        board.placePiece(new King(board, Color.BLACK), new PositionEntity(5, 1));
     }
 }
